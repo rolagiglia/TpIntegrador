@@ -38,7 +38,6 @@ public class Mapa {
     public void agregarPueblo(Pueblo pueblo) {    	
     	pueblos.put(pueblo.getId(), pueblo);
     	adyacencias.put(pueblo.getId(),new ArrayList<>() ); // Creamos la lista de caminos del pueblo
-        this.cantidadPueblos++;
     }
 
     public void agregarCamino(int origen, int destino, int distancia) {
