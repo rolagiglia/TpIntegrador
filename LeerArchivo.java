@@ -64,7 +64,7 @@ public class LeerArchivo {
         String raza = partes[2];
         String tipo = partes[3]; // propio, aliado o enemigo
 
-        Pueblo pueblo = new Pueblo(id, habitantes, raza, tipo);
+        Pueblo pueblo = new Pueblo(id, habitantes, raza, TipoPueblo.valueOf(tipo.toLowerCase()));
         Mapa.obtenerInstancia().agregarPueblo(pueblo);
     }
 
@@ -84,7 +84,7 @@ public class LeerArchivo {
         int origen = Integer.parseInt(partes[0]);
         int destino = Integer.parseInt(partes[1]);
         int distancia = Integer.parseInt(partes[2]);
-        
+        //////////////////////////////////////////////////////////////////////////////////solo demostrativo
         System.out.println(origen  +  " " + destino + " "+distancia);
         
         Mapa.obtenerInstancia().agregarCamino(origen, destino, distancia);

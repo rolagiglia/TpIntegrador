@@ -4,9 +4,9 @@ public class Pueblo {
     private int id;
     private int habitantes;
     private String raza;
-    private String tipo; // Propio, aliado, enemigo
+    private TipoPueblo tipo; // enum: propio, aliado, enemigo
 
-    public Pueblo(int id, int habitantes, String raza, String tipo) {
+    public Pueblo(int id, int habitantes, String raza, TipoPueblo tipo) {
         this.id = id;
         this.habitantes = habitantes;
         this.raza = raza;
@@ -25,7 +25,7 @@ public class Pueblo {
         return raza;
     }
 
-    public String getTipo() {
+    public TipoPueblo getTipo() {
         return tipo;
     }
     
